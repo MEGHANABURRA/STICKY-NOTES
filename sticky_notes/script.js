@@ -15,18 +15,30 @@ function createnote()
         container3.style.display="none";
     }
 }
-
+function setAttributes(el, attrs) {
+    for(var key in attrs) {
+      el.setAttribute(key, attrs[key]);
+    }
+  }
 function saveNote()
 {
     var noteText=document.getElementById("notes").value;
     var node0=document.createElement("div");
     var node1=document.createElement("h1");
+    // var x=document.createElementNS("http://www.w3.org/2000/svg","svg");
+    //var tick=document.createElementNS("http://www.w3.org/2000/svg","svg");
+    //x.innerHTML=xIcon.innerHTML;
+    //tick.innerHTML=tickIcon.innerHTML;
+    //x.setAttributes(xIcon.getAttributeNames(),xIcon.getAttributes(xIcon.getAttributeNames()));
     node1.innerHTML=noteText;
     node1.setAttribute("style","width:250px; height:250px; font-size:26px; padding:25px; margin-top:10px; overflow:hidden; box-shadow:0px 10px 24px 0px rgba(0,0,0,0.75)");
     node1.style.margin=margin();
     node1.style.transform=rotate();
     node1.style.background=color();
     node0.appendChild(node1);
+    //document.create
+    node0.appendChild(a);
+   // node0.appendChild(tick);
     container2.insertAdjacentElement("beforeend",node0);
     node0.addEventListener("mouseenter",function(){
         node0.style.transform="scale(1.1)";

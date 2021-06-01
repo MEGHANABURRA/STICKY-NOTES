@@ -9,7 +9,7 @@ body{
     background-image:url("DOODLE.jpg");
     background-position:center;
     height:100%;
-    background-repeat: no-repeat;
+    background-repeat:repeat-y;
     background-size: cover;
     font-family: "Coming Soon";
     font-size: 20px;
@@ -48,11 +48,17 @@ svg{
 }
 #tick-icon{
     position:absolute;
-    right:18%;
+    right:13%;
     top: 4%;
+}
+#tick-icon:hover{
+    cursor:pointer;
 }
 #x-icon{
     position: absolute;
-    right:10%;
-    top:4%;
+    right:5%;
+    top:4.5%;
+}
+#x-icon:hover{
+    cursor: pointer;
 }
